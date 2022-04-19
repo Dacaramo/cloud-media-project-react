@@ -1,0 +1,14 @@
+@import "./styles/Variables.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+:root {
+  font-size: 12px;
+  font-family: 'Manjari', sans-serif;
+
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
