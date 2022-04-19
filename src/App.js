@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
+import LoginPage from "./pages/LoginPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
 
@@ -8,7 +10,12 @@ function App() {
   }, []);
 
   return (
-    <h1>Hello Cloud Media Project</h1>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="*" element={<ErrorPage/>} />
+      </Routes>
+    </Router>
   );
 }
 

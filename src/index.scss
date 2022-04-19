@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
 
 :root {
-  font-size: 12px;
+  font-size: 20px;
   font-family: 'Manjari', sans-serif;
+  color: $black;
 
   overflow-x: hidden;
 }
@@ -11,4 +12,18 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+button,
+input,
+select {
+  width: 10rem;
+  height: 3rem;
+  border-width: 0.5rem;
+  border-radius: 50px;
+
+  border-style: solid;
+  border-color: $info-blue;
+  background-color: $light-info-blue;
+  color: $white;
 }
