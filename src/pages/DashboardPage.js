@@ -1,6 +1,11 @@
+import myStyles from "../styles/Dashboard.module.scss";
+import DashboardHeader from "../components/DashboardHeader";
+
 const DashboardPage = () => {
     return (
-        <div>This is the DashboardPage</div>
+        <div className={myStyles.externalContainer}>
+            <DashboardHeader />
+        </div>
     )
 }
 

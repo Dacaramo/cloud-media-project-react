@@ -1,0 +1,44 @@
+@import "./Variables.module.scss";
+
+// TYPE SELECTORS
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+span {
+    font-size: 1rem;
+}
+
+// CLASS SELECTORS
+
+.externalContainer {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pill {
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 0.5rem;
+    border-color: $info-blue;
+}
