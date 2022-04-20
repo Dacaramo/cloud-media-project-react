@@ -1,13 +1,15 @@
 @import "./styles/Variables.module.scss";
-@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   font-size: 20px;
-  font-family: 'Manjari', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: $black;
 
   overflow-x: hidden;
 }
+
+//TYPE SELECTORS
 
 body {
   margin: 0;
@@ -18,12 +20,77 @@ button,
 input,
 select {
   width: 10rem;
-  height: 3rem;
-  border-width: 0.5rem;
+  height: 2rem;
+  border-width: 0.05rem;
   border-radius: 50px;
 
   border-style: solid;
   border-color: $info-blue;
   background-color: $light-info-blue;
   color: $white;
+  font-family: 'Nunito', sans-serif;
+}
+
+input {
+  padding-left: 1.5rem;
+
+  color: $black;
+}
+
+button {
+  cursor: pointer;
+
+  font-weight: bold;
+  background-color: $info-blue;
+}
+
+span, a {
+  font-size: 0.6rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+form {
+  div{
+    label {
+      margin-left: 1.5rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+  }
+}
+
+// CLASS SELECTORS
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-container {
+  //Center the modal both vertically and horizontally
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  //The modal is also a column flex-box
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 15px;
+  background-color: $white;
+}
+
+.close-modal-btn {
+  align-self: flex-end;
+  background-color: $info-blue;
 }

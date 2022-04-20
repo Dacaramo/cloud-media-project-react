@@ -1,0 +1,42 @@
+@import "./Variables.module.scss";
+
+.authModalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/loginBackground.jpg) no-repeat center center fixed;;
+    z-index: 1000;
+}
+
+.authModalContainer {
+    //Center the modal both vertically and horizontally
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    //The modal is also a column flex-box
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 50px;
+
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 0.25rem;
+    border-color: rgb(255, 138, 42);
+
+    background-color: $white;
+}
+
+img {
+    width: 200px;
+}
+
+.messageSpan {
+    color: $error-red;
+}
