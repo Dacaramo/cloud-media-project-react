@@ -1,5 +1,13 @@
 @import "./Variables.module.scss";
 
+// TYPE SELECTORS
+
+.logoImg {
+    width: 160px;
+}
+
+// CLASS SELECTORS
+
 .authModalBackground {
     position: fixed;
     top: 0;
@@ -31,10 +39,6 @@
     border-color: rgb(255, 138, 42);
 
     background-color: $white;
-}
-
-img {
-    width: 160px;
 }
 
 .messageSpan {

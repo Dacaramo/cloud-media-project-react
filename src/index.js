@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import AuthDataReducer from './features/authData';
+import ProjectListReducer from './features/projectList';
 
 const store = configureStore({
   reducer: {
-    authData: AuthDataReducer
+    authData: AuthDataReducer,
+    projectList: ProjectListReducer
   }
 });
 

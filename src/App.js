@@ -5,6 +5,7 @@ import SignupPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
+import ProjectPage from "./pages/ProjectPage";
 import AuthenticatedOutlet from "./components/AuthenticatedOutlet";
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/profile" element={<AuthenticatedOutlet/>} >
           <Route path="" element={<ProfilePage/>} />
+        </Route>
+        <Route path="/project" element={<AuthenticatedOutlet/>} >
+          <Route path="" element={<ProjectPage/>} />
         </Route>
 
         <Route path="*" element={<ErrorPage/>} />

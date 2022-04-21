@@ -75,22 +75,48 @@ form {
 }
 
 .modal-container {
-  //Center the modal both vertically and horizontally
+  // Center the modal both vertically and horizontally
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  //The modal is also a column flex-box
+  // The modal is also a column flex-box
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  gap: 0.75rem;
   border-radius: 15px;
   background-color: $white;
+
+  padding: 50px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.horizontal-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .close-modal-btn {
+  margin-left: 15px;
+  color: rgb(224, 224, 224);
+  font-weight: bold;
+  float: right;
+  font-size: 50px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
   align-self: flex-end;
-  background-color: $info-blue;
+}
+
+.close-modal-btn:hover {
+  color: $error-red;
 }

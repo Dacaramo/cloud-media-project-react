@@ -30,7 +30,7 @@ const LoginModal = () => {
     return createPortal(
         <div className={myStyles.authModalBackground}>
             <form className={myStyles.authModalContainer} onSubmit={handleSubmit}>
-                <img src={logo} />
+                <img className={myStyles.logoImg} src={logo} />
                 <div>
                     <label htmlFor="emailInput">Email</label><br />
                     <input type="email" id="emailInput" placeholder="Ingrese su email" required />

@@ -1,32 +1,70 @@
 @import "./Variables.module.scss";
 
-// TYPE SELECTORS
+// CLASS SELECTORS
 
-img {
+.circularImg {
     width: 100px;
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
-span {
+.dataFieldsText {
     font-size: 1rem;
 }
 
-// CLASS SELECTORS
-
-.externalContainer {
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
+.cardDataFieldText {
+    font-size: 0.8rem;
+    width: 25rem;
 }
 
-.horizontalContainer {
+.externalContainer {
+    margin-top: 138.94px;
+
+    padding: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fixedHorizontalContainer {
+    position: fixed;
+    // Prevents all the child elements of the flex-box to stick to each other
+    top: 0.7rem;
+    left: 1rem;
+    right: 1rem;
+    // The container stills a flex-box
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+
+    height: 125px;
+    z-index: 1000;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0.15px;
+    
+    box-shadow: 7.5px 7.5px 6px rgb(168, 168, 168);
+    background-color: $light-info-blue;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cardsContainer {
+    composes: horizontalContainer;
+    justify-content: flex-start;
 }
 
 .verticalContainer {
@@ -36,9 +74,54 @@ span {
     align-items: flex-start;
 }
 
+.dashboardCard {
+    composes: verticalContainer;
+    flex-wrap: nowrap;
+    width: 549px;
+    height: 175px;
+    padding: 25px;
+
+    border-style: solid;
+    border-width: 0.15px;
+    border-radius: 15px;
+    border-color: rgb(255, 138, 42);
+    box-shadow: 7.5px 7.5px 6px rgb(168, 168, 168);
+
+    button {
+        background-color: rgb(255, 138, 42);
+        border-color: rgb(255, 138, 42);
+        margin-top: 0.5rem;
+        align-self: flex-end;
+    }
+}
+
+.newCard {
+    composes: dashboardCard;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: rgb(255, 207, 168);
+
+    span {
+        color:rgb(255, 138, 42);
+        font-size: 3rem;
+    }
+}
+
 .pill {
     border-style: solid;
     border-radius: 50px;
     border-width: 0.5rem;
     border-color: $info-blue;
+}
+
+.projectHeader {
+    margin: 0;
+}
+
+.progressBarContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
